@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { ArrowRight, Leaf, Heart, Brain, Clock, MapPin, Phone, Instagram, ChevronDown, Star, Users, Award, CalendarCheck, MessageCircle, Smile, Activity } from 'lucide-react';
 import './index.css';
 
 /* ════════════════════════════════════════════
    WAVE / DECORATIVE SVGs
    ════════════════════════════════════════════ */
-const WaveTop = ({ fill = '#F9F7F2', className = '' }) => (
+const WaveTop = ({ fill = '#FAF7F2', className = '' }) => (
   <div className={`wave-separator ${className}`} style={{ transform: 'rotate(180deg)', top: '-1px', bottom: 'auto' }}>
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
       <path fill={fill} d="M0,64L60,58.7C120,53,240,43,360,48C480,53,600,75,720,80C840,85,960,75,1080,64C1200,53,1320,43,1380,37.3L1440,32L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z" />
@@ -13,7 +13,7 @@ const WaveTop = ({ fill = '#F9F7F2', className = '' }) => (
   </div>
 );
 
-const WaveBottom = ({ fill = '#F9F7F2', className = '' }) => (
+const WaveBottom = ({ fill = '#FAF7F2', className = '' }) => (
   <div className={`wave-separator ${className}`}>
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
       <path fill={fill} d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
@@ -79,8 +79,7 @@ function Navbar() {
     { label: 'Início', href: '#home' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Serviços', href: '#servicos' },
-    { label: 'Método', href: '#metodo' },
-    { label: 'Depoimentos', href: '#depoimentos' },
+    { label: 'O Percurso', href: '#metodo' },
     { label: 'Contato', href: '#contato' },
   ];
 
@@ -89,9 +88,9 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <Brain className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-teal' : 'text-teal'}`} strokeWidth={1.5} />
-          <span className={`font-serif text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-teal-dark' : 'text-teal-dark'}`}>
-            Girlania Vasconcelos
+          <Brain className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-rose' : 'text-rose'}`} strokeWidth={1.5} />
+          <span className={`font-serif text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-charcoal' : 'text-charcoal'}`}>
+            Larissa Maria
           </span>
         </a>
 
@@ -101,16 +100,16 @@ function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-xs uppercase tracking-[0.15em] font-medium text-charcoal/70 hover:text-teal transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-teal after:transition-all after:duration-300 hover:after:w-full"
+              className="text-xs uppercase tracking-[0.15em] font-medium text-charcoal/70 hover:text-rose transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-rose after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+            href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
             target="_blank"
             rel="noreferrer"
-            className="ml-4 bg-teal text-cream px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-teal-dark transition-all duration-300 hover:shadow-lg hover:shadow-teal/20"
+            className="ml-4 bg-charcoal text-cream px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-charcoal/90 transition-all duration-300 hover:shadow-lg hover:shadow-charcoal/20"
           >
             Agendar Consulta
           </a>
@@ -130,23 +129,23 @@ function Navbar() {
 
       {/* Mobile menu */}
       <div className={`lg:hidden overflow-hidden transition-all duration-500 ${menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="bg-cream/98 backdrop-blur-lg px-6 py-6 flex flex-col gap-4 border-t border-teal/10">
+        <div className="bg-cream/98 backdrop-blur-lg px-6 py-6 flex flex-col gap-4 border-t border-rose/10">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-sm uppercase tracking-widest font-medium text-charcoal/80 hover:text-teal transition-colors py-2"
+              className="text-sm uppercase tracking-widest font-medium text-charcoal/80 hover:text-rose transition-colors py-2"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+            href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
             target="_blank"
             rel="noreferrer"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 bg-teal text-cream px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold text-center hover:bg-teal-dark transition-all"
+            className="mt-2 bg-charcoal text-cream px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold text-center hover:bg-charcoal/90 transition-all"
           >
             Agendar Consulta
           </a>
@@ -163,44 +162,44 @@ function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-cream overflow-hidden pt-20">
       {/* Background decorative elements */}
-      <OrganicBlob className="absolute -right-32 -top-32 w-[500px] h-[500px] text-teal/[0.04] hidden md:block" />
-      <OrganicBlob className="absolute -left-40 bottom-0 w-[400px] h-[400px] text-sage/[0.06] hidden md:block" />
-      <LeafDecor className="absolute right-16 top-32 w-24 h-24 text-teal hidden lg:block animate-float" />
+      <OrganicBlob className="absolute -right-32 -top-32 w-[500px] h-[500px] text-rose/[0.04] hidden md:block" />
+      <OrganicBlob className="absolute -left-40 bottom-0 w-[400px] h-[400px] text-beige/[0.06] hidden md:block" />
+      <LeafDecor className="absolute right-16 top-32 w-24 h-24 text-rose hidden lg:block animate-float" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
 
           {/* Text content */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 pb-10 lg:pb-0">
-            <div className="inline-flex items-center gap-2 bg-teal/[0.08] border border-teal/10 rounded-full px-4 py-1.5 mb-6">
-              <Brain className="w-3.5 h-3.5 text-teal" strokeWidth={2} />
-              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-teal">Psicologia Clínica • CRP 09/21338</span>
+            <div className="inline-flex items-center gap-2 bg-rose/[0.08] border border-rose/10 rounded-full px-4 py-1.5 mb-6">
+              <Brain className="w-3.5 h-3.5 text-rose" strokeWidth={2} />
+              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-rose">Psicanálise • CRP 09/13471</span>
             </div>
 
             <h1 className="font-serif text-[2.8rem] md:text-6xl lg:text-[5.5rem] leading-[1.05] mb-6 text-charcoal break-words">
               Um espaço de{' '}
-              <span className="italic text-teal">acolhimento</span>
+              <span className="italic text-rose">escuta singular</span>
               <br />
-              só seu
+              para você
             </h1>
 
             <p className="text-base md:text-lg font-light text-charcoal/70 max-w-lg leading-relaxed mb-8">
-              Tratamento especializado para Ansiedade e Depressão com foco na Saúde Mental da Mulher. Atendimento presencial em Goiânia e online para todo o Brasil.
+              Atendimento focado na sua subjetividade, sem julgamentos. Uma jornada de autoconhecimento e elaboração de conflitos através da Psicanálise. Presencial em Goiânia e Online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <a
-                href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+                href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-center gap-3 bg-teal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-teal-dark transition-all duration-300 shadow-lg shadow-teal/20 hover:shadow-xl hover:shadow-teal/30"
+                className="group flex items-center justify-center gap-3 bg-charcoal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-charcoal/90 transition-all duration-300 shadow-lg shadow-charcoal/20 hover:shadow-xl hover:shadow-charcoal/30"
               >
                 Agendar Consulta
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#sobre"
-                className="group flex items-center justify-center gap-3 border-2 border-teal/20 text-teal px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-teal/5 transition-all duration-300"
+                className="group flex items-center justify-center gap-3 border-2 border-rose/20 text-rose-dark px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-rose/5 transition-all duration-300"
               >
                 Saiba Mais
                 <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
@@ -210,17 +209,17 @@ function HeroSection() {
             {/* Trust badges */}
             <div className="flex items-center gap-6 mt-10 pt-8 border-t border-charcoal/10">
               <div className="text-center">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">100%</p>
+                <p className="font-serif text-2xl md:text-3xl font-bold text-rose">100%</p>
                 <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Acolhimento</p>
               </div>
               <div className="h-8 w-[1px] bg-charcoal/10" />
               <div className="text-center">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">TCC</p>
-                <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Abordagem</p>
+                <p className="font-serif text-2xl md:text-3xl font-bold text-rose">Ética</p>
+                <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Profissional</p>
               </div>
               <div className="h-8 w-[1px] bg-charcoal/10" />
               <div className="text-center">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">Online</p>
+                <p className="font-serif text-2xl md:text-3xl font-bold text-rose">Online</p>
                 <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">& Presencial</p>
               </div>
             </div>
@@ -230,24 +229,24 @@ function HeroSection() {
           <div className="flex-1 relative order-1 lg:order-2 w-full max-w-md lg:max-w-lg">
             <div className="relative">
               {/* Decorative shape behind image */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-teal/10 to-sage/10 rounded-[40px] md:rounded-[60px] rotate-3" />
-              <div className="absolute -inset-4 bg-gradient-to-tr from-terracotta/5 to-transparent rounded-[40px] md:rounded-[60px] -rotate-2" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-rose/10 to-beige/10 rounded-[40px] md:rounded-[60px] rotate-3" />
+              <div className="absolute -inset-4 bg-gradient-to-tr from-beige-dark/5 to-transparent rounded-[40px] md:rounded-[60px] -rotate-2" />
 
               <img
-                src="/fotos/Girlania1.png"
-                alt="Girlania Vasconcelos - Psicóloga"
+                src="/fotos/Larissa1.png"
+                alt="Larissa Maria - Psicóloga"
                 className="relative w-full max-w-full aspect-[3/4] object-cover rounded-[30px] md:rounded-[50px] shadow-2xl shadow-charcoal/10"
               />
 
               {/* Floating card overlay */}
               <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-8 bg-white/90 backdrop-blur-md rounded-2xl p-4 md:p-5 shadow-xl border border-white/50 animate-float">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-teal/10 rounded-full flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-teal" strokeWidth={1.5} />
+                  <div className="w-10 h-10 bg-rose/10 rounded-full flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-rose" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-charcoal">Saúde da Mulher</p>
-                    <p className="text-[10px] text-charcoal/50">Cuidado especializado</p>
+                    <p className="text-xs font-semibold text-charcoal">Clínica Psicanalítica</p>
+                    <p className="text-[10px] text-charcoal/50">Jovens e Adultos</p>
                   </div>
                 </div>
               </div>
@@ -255,8 +254,8 @@ function HeroSection() {
               {/* Floating card right */}
               <div className="absolute -top-2 -right-2 md:top-4 md:-right-6 bg-white/90 backdrop-blur-md rounded-2xl p-3 md:p-4 shadow-xl border border-white/50 animate-float" style={{ animationDelay: '-3s' }}>
                 <div className="flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-terracotta" strokeWidth={1.5} />
-                  <span className="text-[10px] font-semibold text-charcoal uppercase tracking-wider">Terapia<br/>Cognitivo-Comportamental</span>
+                  <Brain className="w-5 h-5 text-beige-dark" strokeWidth={1.5} />
+                  <span className="text-[10px] font-semibold text-charcoal uppercase tracking-wider">Escuta<br/>Acolhedora</span>
                 </div>
               </div>
             </div>
@@ -266,7 +265,7 @@ function HeroSection() {
       </div>
 
       {/* Organic wave transition */}
-      <WaveBottom fill="#F0EDE6" />
+      <WaveBottom fill="#F4EFE6" />
     </section>
   );
 }
@@ -277,8 +276,8 @@ function HeroSection() {
 function AboutSection() {
   return (
     <section id="sobre" className="relative bg-cream-dark py-24 md:py-32 px-6 md:px-12 overflow-hidden">
-      <LeafDecor className="absolute left-8 top-12 w-20 h-20 text-teal opacity-40 hidden lg:block" />
-      <OrganicBlob className="absolute -right-48 top-20 w-[500px] h-[500px] text-teal/[0.03] hidden md:block" />
+      <LeafDecor className="absolute left-8 top-12 w-20 h-20 text-rose opacity-40 hidden lg:block" />
+      <OrganicBlob className="absolute -right-48 top-20 w-[500px] h-[500px] text-rose/[0.03] hidden md:block" />
 
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -286,16 +285,16 @@ function AboutSection() {
           {/* Image side */}
           <div className="flex-1 relative reveal-left w-full">
             <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="absolute -inset-6 bg-teal/5 rounded-[50px] -rotate-3" />
+              <div className="absolute -inset-6 bg-rose/5 rounded-[50px] -rotate-3" />
               <img
-                src="/fotos/Girlania2.png"
-                alt="Girlania Vasconcelos"
+                src="/fotos/Larissa2.png"
+                alt="Larissa Maria"
                 className="relative w-full max-w-full aspect-[4/5] object-cover rounded-[40px] shadow-xl"
               />
               {/* Experience badge */}
-              <div className="absolute -bottom-6 right-4 md:right-0 bg-teal text-cream rounded-2xl p-5 shadow-xl">
-                <p className="font-serif text-3xl font-bold">TCC</p>
-                <p className="text-[10px] uppercase tracking-widest opacity-80">Especialista</p>
+              <div className="absolute -bottom-6 right-4 md:right-0 bg-rose text-cream rounded-2xl p-5 shadow-xl">
+                <p className="font-serif text-3xl font-bold">CRP</p>
+                <p className="text-[10px] uppercase tracking-widest opacity-80">09/13471</p>
               </div>
             </div>
           </div>
@@ -303,31 +302,31 @@ function AboutSection() {
           {/* Text side */}
           <div className="flex-1 reveal-right">
             <div className="inline-flex items-center gap-2 mb-4">
-              <div className="w-8 h-[1.5px] bg-teal" />
-              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-teal">Sobre Mim</span>
+              <div className="w-8 h-[1.5px] bg-rose" />
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-rose">Sobre Mim</span>
             </div>
 
             <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-6 leading-[1.1] break-words">
               Olá, eu sou a{' '}
-              <span className="italic text-teal">Girlania Vasconcelos</span>
+              <span className="italic text-rose">Larissa Maria</span>
             </h2>
 
             <p className="text-sm md:text-base font-light text-charcoal/70 leading-relaxed mb-5">
-              Sou Psicóloga Clínica (CRP 09/21338), dedicada a ajudar mulheres a reencontrarem o equilíbrio emocional, tratando quadros de ansiedade e depressão.
+              Sou Psicóloga Clínica e Psicanalista (CRP 09/13471), apaixonada pela escuta atenta e por ajudar as pessoas a se compreenderem de forma profunda e verdadeira.
             </p>
 
             <p className="text-sm md:text-base font-light text-charcoal/70 leading-relaxed mb-8">
-              Através da Terapia Cognitivo-Comportamental (TCC), trabalho para oferecer um espaço seguro e acolhedor, focado na sua saúde mental, promovendo mudanças reais e um maior bem-estar para o seu dia a dia.
+              Acredito que através do percurso psicanalítico podemos ressignificar nossas dores, medos e angústias. Ofereço um ambiente ético, de confiança e totalmente livre de julgamentos, para que você possa falar livremente sobre aquilo que lhe causa sofrimento.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
-                { icon: <Award className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'CRP 09/21338' },
-                { icon: <Brain className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Especialista em TCC' },
-                { icon: <CalendarCheck className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Presencial & Online' },
-                { icon: <Heart className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Saúde da Mulher' },
+                { icon: <Award className="w-5 h-5 text-rose" strokeWidth={1.5} />, text: 'Psicologia Clínica' },
+                { icon: <Brain className="w-5 h-5 text-rose" strokeWidth={1.5} />, text: 'Psicanálise' },
+                { icon: <CalendarCheck className="w-5 h-5 text-rose" strokeWidth={1.5} />, text: 'Presencial & Online' },
+                { icon: <Users className="w-5 h-5 text-rose" strokeWidth={1.5} />, text: 'Jovens e Adultos' },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-cream/80 rounded-xl px-4 py-3 border border-teal/5">
+                <div key={i} className="flex items-center gap-3 bg-cream/80 rounded-xl px-4 py-3 border border-rose/5">
                   {item.icon}
                   <span className="text-xs font-medium text-charcoal/80">{item.text}</span>
                 </div>
@@ -335,10 +334,10 @@ function AboutSection() {
             </div>
 
             <a
-              href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
+              href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex items-center gap-3 bg-teal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-teal-dark transition-all duration-300 shadow-lg shadow-teal/20"
+              className="group inline-flex items-center gap-3 bg-charcoal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-charcoal/90 transition-all duration-300 shadow-lg shadow-charcoal/20"
             >
               Fale Comigo
               <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -348,7 +347,7 @@ function AboutSection() {
         </div>
       </div>
 
-      <WaveBottom fill="#F9F7F2" />
+      <WaveBottom fill="#FAF7F2" />
     </section>
   );
 }
@@ -357,12 +356,12 @@ function AboutSection() {
    MARQUEE / INFINITE SCROLL TEXT
    ════════════════════════════════════════════ */
 function MarqueeSection() {
-  const items = ['Terapia Cognitivo-Comportamental', '•', 'Ansiedade', '•', 'Depressão', '•', 'Saúde Mental da Mulher', '•', 'Atendimento Online', '•', 'Acolhimento', '•'];
+  const items = ['Psicanálise', '•', 'Escuta Analítica', '•', 'Autoconhecimento', '•', 'Acolhimento', '•', 'Psicoterapia Online', '•', 'Ética', '•'];
   return (
-    <div className="bg-teal py-5 overflow-hidden relative">
+    <div className="bg-rose py-5 overflow-hidden relative">
       <div className="flex animate-ticker whitespace-nowrap">
         {[...items, ...items, ...items, ...items].map((item, i) => (
-          <span key={i} className={`font-serif text-xl md:text-2xl mx-4 ${item === '•' ? 'text-sage' : 'text-cream/90 italic'}`}>
+          <span key={i} className={`font-serif text-xl md:text-2xl mx-4 ${item === '•' ? 'text-charcoal/50' : 'text-charcoal italic'}`}>
             {item}
           </span>
         ))}
@@ -378,58 +377,58 @@ function ServicesSection() {
   const services = [
     {
       icon: <Brain className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Tratamento de Ansiedade',
-      desc: 'Estratégias eficazes para lidar com crises de pânico, preocupação excessiva e medos constantes, promovendo estabilidade emocional.',
-      accent: 'from-teal/10 to-sage/10',
+      title: 'Ansiedade e Angústia',
+      desc: 'Um espaço para falar sobre o que te aflige, compreendendo as raízes da ansiedade e encontrando novas formas de lidar com ela.',
+      accent: 'from-rose/10 to-beige/10',
     },
     {
       icon: <Heart className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Tratamento de Depressão',
-      desc: 'Acolhimento e intervenções baseadas em evidências para superar a apatia, tristeza profunda e recuperar a vitalidade e sentido de vida.',
-      accent: 'from-terracotta/10 to-sand/20',
-    },
-    {
-      icon: <Smile className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Saúde Mental da Mulher',
-      desc: 'Um espaço de escuta sem julgamentos para tratar sobrecargas, autoestima, relacionamentos e questões específicas do universo feminino.',
-      accent: 'from-sage/15 to-teal/5',
-    },
-    {
-      icon: <Activity className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Terapia Cognitivo-Comportamental',
-      desc: 'Abordagem focada no presente, estruturada e diretiva, que visa identificar e modificar padrões de pensamentos e comportamentos disfuncionais.',
-      accent: 'from-teal/8 to-terracotta/8',
+      title: 'Sofrimento Emocional',
+      desc: 'Acolhimento para momentos de tristeza profunda, luto, perdas e sentimentos de vazio, promovendo a ressignificação das dores.',
+      accent: 'from-beige-dark/10 to-beige/20',
     },
     {
       icon: <Users className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Desenvolvimento Pessoal',
-      desc: 'Aperfeiçoamento da inteligência emocional, habilidades sociais e autoconhecimento para uma vida mais equilibrada e relacionamentos saudáveis.',
-      accent: 'from-sand/20 to-cream/50',
+      title: 'Conflitos de Relacionamento',
+      desc: 'Análise dos padrões que se repetem nas relações interpessoais, amorosas ou familiares, buscando maior harmonia e limites saudáveis.',
+      accent: 'from-beige/15 to-rose/5',
+    },
+    {
+      icon: <Activity className="w-8 h-8" strokeWidth={1.2} />,
+      title: 'Crises e Transições',
+      desc: 'Suporte emocional para fases de mudança na vida, escolhas profissionais, términos, e novos ciclos que geram incertezas.',
+      accent: 'from-rose/8 to-beige-dark/8',
+    },
+    {
+      icon: <Smile className="w-8 h-8" strokeWidth={1.2} />,
+      title: 'Autoconhecimento',
+      desc: 'Uma investigação profunda sobre o seu próprio desejo, história e escolhas, possibilitando uma vida com mais autenticidade e sentido.',
+      accent: 'from-beige/20 to-cream/50',
     },
     {
       icon: <CalendarCheck className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Psicoterapia Online',
-      desc: 'Sessões terapêuticas completas de qualquer lugar do Brasil ou do mundo, com a mesma qualidade e ética do atendimento presencial.',
-      accent: 'from-teal/10 to-sage/5',
+      title: 'Atendimento Online e Presencial',
+      desc: 'Sessões conduzidas com o mesmo rigor ético e qualidade, seja no consultório em Goiânia ou no conforto da sua casa em qualquer lugar do Brasil.',
+      accent: 'from-rose/10 to-beige/5',
     },
   ];
 
   return (
     <section id="servicos" className="relative bg-cream py-24 md:py-32 px-6 md:px-12 overflow-hidden">
-      <OrganicBlob className="absolute -left-32 top-20 w-[400px] h-[400px] text-sage/[0.04] hidden md:block" />
+      <OrganicBlob className="absolute -left-32 top-20 w-[400px] h-[400px] text-beige/[0.04] hidden md:block" />
 
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 md:mb-20 reveal-up">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-[1.5px] bg-teal" />
-            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-teal">Especialidades</span>
-            <div className="w-8 h-[1.5px] bg-teal" />
+            <div className="w-8 h-[1.5px] bg-rose" />
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-rose">Especialidades</span>
+            <div className="w-8 h-[1.5px] bg-rose" />
           </div>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-4 leading-tight">
-            Como posso te <span className="italic text-teal">ajudar</span>
+            O que trabalhamos <span className="italic text-rose">na clínica</span>
           </h2>
           <p className="text-sm md:text-base font-light text-charcoal/60 max-w-xl mx-auto leading-relaxed">
-            Cada pessoa é única, e meu atendimento reflete isso. Conheça as áreas em que posso contribuir para a sua saúde.
+            A psicanálise não oferece receitas prontas, mas sim um espaço seguro para que cada pessoa encontre as suas próprias respostas.
           </p>
         </div>
 
@@ -437,14 +436,14 @@ function ServicesSection() {
           {services.map((service, i) => (
             <div
               key={i}
-              className="reveal-up group relative bg-white rounded-3xl p-8 shadow-sm border border-charcoal/[0.04] hover:shadow-xl hover:shadow-teal/[0.06] transition-all duration-500 hover:-translate-y-1 cursor-pointer overflow-hidden"
+              className="reveal-up group relative bg-white rounded-3xl p-8 shadow-sm border border-charcoal/[0.04] hover:shadow-xl hover:shadow-rose/[0.06] transition-all duration-500 hover:-translate-y-1 cursor-pointer overflow-hidden"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               {/* Gradient accent on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`} />
 
               <div className="relative">
-                <div className="w-14 h-14 bg-teal/[0.08] rounded-2xl flex items-center justify-center text-teal mb-6 group-hover:bg-teal/[0.12] transition-colors duration-300">
+                <div className="w-14 h-14 bg-rose/[0.08] rounded-2xl flex items-center justify-center text-rose mb-6 group-hover:bg-rose/[0.12] transition-colors duration-300">
                   {service.icon}
                 </div>
                 <h3 className="font-serif text-xl md:text-2xl text-charcoal mb-3">{service.title}</h3>
@@ -455,7 +454,7 @@ function ServicesSection() {
         </div>
       </div>
 
-      <WaveBottom fill="#3D5A5A" />
+      <WaveBottom fill="#2D2B2A" />
     </section>
   );
 }
@@ -467,42 +466,42 @@ function MethodSection() {
   const steps = [
     {
       step: '01',
-      title: 'Acolhimento',
-      desc: 'Nossa primeira sessão é focada em entender sua história, suas queixas principais e criar um vínculo de confiança mútuo.',
+      title: 'Associação Livre',
+      desc: 'O princípio é simples: falar o que vier à mente, sem censura ou preocupação estética. É na fala livre que a verdade do sujeito aparece.',
     },
     {
       step: '02',
-      title: 'Avaliação',
-      desc: 'Identificamos os padrões de pensamento e comportamento que estão mantendo sua ansiedade ou depressão.',
+      title: 'Escuta Atenta',
+      desc: 'Minha função é escutar não apenas o que é dito, mas como é dito. Há uma escuta ativa focada nas repetições e lapsos do discurso.',
     },
     {
       step: '03',
-      title: 'Intervenção',
-      desc: 'Aplicamos técnicas baseadas em evidências da TCC para reestruturar pensamentos e promover regulação emocional.',
+      title: 'Elaboração',
+      desc: 'Através das intervenções analíticas, você começa a perceber padrões inconscientes que determinam suas escolhas e dores.',
     },
     {
       step: '04',
-      title: 'Autonomia',
-      desc: 'Desenvolvemos suas habilidades de enfrentamento, para que você seja sua própria terapeuta no dia a dia.',
+      title: 'Ressignificação',
+      desc: 'Construímos novos sentidos para velhos problemas, possibilitando uma vida menos submetida ao sofrimento e mais próxima ao seu desejo.',
     },
   ];
 
   return (
-    <section id="metodo" className="relative bg-teal py-24 md:py-32 px-6 md:px-12 overflow-hidden">
+    <section id="metodo" className="relative bg-charcoal py-24 md:py-32 px-6 md:px-12 overflow-hidden">
       <div className="absolute inset-0 topo-lines opacity-30" />
 
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-16 md:mb-20 reveal-up">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-[1.5px] bg-sage" />
-            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-sage">Meu Método</span>
-            <div className="w-8 h-[1.5px] bg-sage" />
+            <div className="w-8 h-[1.5px] bg-rose" />
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-rose">O Percurso</span>
+            <div className="w-8 h-[1.5px] bg-rose" />
           </div>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-cream mb-4 leading-tight">
-            Como <span className="italic text-sage">funciona</span>
+            Como funciona a <span className="italic text-rose">Psicanálise</span>
           </h2>
           <p className="text-sm md:text-base font-light text-cream/60 max-w-xl mx-auto leading-relaxed">
-            Um processo cuidadoso e personalizado para que você alcance seus objetivos de forma saudável e prazerosa.
+            Uma abordagem que aposta na palavra e na singularidade de cada história. Não há roteiros, há uma escuta profunda e transformadora.
           </p>
         </div>
 
@@ -523,7 +522,7 @@ function MethodSection() {
                 <div className="hidden lg:block absolute top-10 right-0 translate-x-1/2 w-24 h-[1px] bg-cream/15" />
               )}
 
-              <div className="w-3 h-3 bg-sage rounded-full mx-auto mb-6" />
+              <div className="w-3 h-3 bg-rose rounded-full mx-auto mb-6" />
               <h3 className="font-serif text-xl md:text-2xl text-cream mb-3">{step.title}</h3>
               <p className="text-sm font-light text-cream/60 leading-relaxed">{step.desc}</p>
             </div>
@@ -531,7 +530,7 @@ function MethodSection() {
         </div>
       </div>
 
-      <WaveBottom fill="#F9F7F2" />
+      <WaveBottom fill="#FAF7F2" />
     </section>
   );
 }
@@ -542,35 +541,35 @@ function MethodSection() {
 function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'A. C.',
-      text: 'A terapia com a Girlania mudou a minha vida. Consegui entender e controlar minhas crises de ansiedade. Me sinto muito mais leve hoje.',
-      role: 'Paciente Online',
+      name: 'P. F.',
+      text: 'O espaço que a Larissa proporciona é único. Pela primeira vez consegui falar sobre questões que eu nem sabia que me afetavam tanto. A psicanálise tem me transformado.',
+      role: 'Paciente',
     },
     {
-      name: 'L. M.',
-      text: 'O acolhimento que recebi fez toda a diferença no tratamento da minha depressão. Um espaço seguro onde pude ser eu mesma, sem julgamentos.',
-      role: 'Paciente Presencial',
+      name: 'M. S.',
+      text: 'A escuta da Larissa é muito cuidadosa e sem nenhum julgamento. Comecei a terapia para ansiedade e acabei descobrindo muito sobre mim mesma. Recomendo de olhos fechados.',
+      role: 'Paciente',
     },
     {
-      name: 'S. F.',
-      text: 'Excelente profissional! A Terapia Cognitivo-Comportamental me ajudou a organizar meus pensamentos e recuperar minha autoestima.',
-      role: 'Paciente Online',
+      name: 'R. A.',
+      text: 'Sempre tive resistência à terapia, mas o acolhimento da Larissa quebrou todas as minhas barreiras. Me sinto muito mais seguro para lidar com os conflitos do meu dia a dia.',
+      role: 'Paciente',
     },
   ];
 
   return (
     <section id="depoimentos" className="relative bg-cream py-24 md:py-32 px-6 md:px-12 overflow-hidden">
-      <OrganicBlob className="absolute -right-40 -bottom-40 w-[500px] h-[500px] text-terracotta/[0.04] hidden md:block" />
+      <OrganicBlob className="absolute -right-40 -bottom-40 w-[500px] h-[500px] text-beige-dark/[0.04] hidden md:block" />
 
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 md:mb-20 reveal-up">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-[1.5px] bg-teal" />
-            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-teal">Depoimentos</span>
-            <div className="w-8 h-[1.5px] bg-teal" />
+            <div className="w-8 h-[1.5px] bg-rose" />
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-rose">Depoimentos</span>
+            <div className="w-8 h-[1.5px] bg-rose" />
           </div>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-4 leading-tight">
-            O que dizem meus <span className="italic text-teal">pacientes</span>
+            A experiência do <span className="italic text-rose">Percurso</span>
           </h2>
         </div>
 
@@ -584,7 +583,7 @@ function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 text-terracotta fill-terracotta" />
+                  <Star key={j} className="w-4 h-4 text-rose fill-rose" />
                 ))}
               </div>
 
@@ -593,8 +592,8 @@ function TestimonialsSection() {
               </p>
 
               <div className="flex items-center gap-3 pt-4 border-t border-charcoal/5">
-                <div className="w-10 h-10 rounded-full bg-teal/10 flex items-center justify-center">
-                  <span className="font-serif text-sm font-bold text-teal">{t.name.charAt(0)}</span>
+                <div className="w-10 h-10 rounded-full bg-rose/10 flex items-center justify-center">
+                  <span className="font-serif text-sm font-bold text-rose">{t.name.charAt(0)}</span>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-charcoal">{t.name}</p>
@@ -616,33 +615,33 @@ function CtaSection() {
   return (
     <section className="relative bg-cream-dark py-24 md:py-32 px-6 md:px-12 overflow-hidden">
       <div className="max-w-5xl mx-auto reveal-scale">
-        <div className="relative bg-gradient-to-br from-teal to-teal-dark rounded-[30px] md:rounded-[40px] p-10 md:p-16 overflow-hidden text-center shadow-2xl shadow-teal/20">
+        <div className="relative bg-gradient-to-br from-rose to-rose-dark rounded-[30px] md:rounded-[40px] p-10 md:p-16 overflow-hidden text-center shadow-2xl shadow-rose/20">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-sage/10 rounded-full -translate-y-1/2 translate-x-1/3" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-terracotta/10 rounded-full translate-y-1/3 -translate-x-1/4" />
-          <LeafDecor className="absolute right-8 bottom-8 w-24 h-24 text-cream/20 hidden md:block" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-beige/10 rounded-full -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-beige-dark/10 rounded-full translate-y-1/3 -translate-x-1/4" />
+          <LeafDecor className="absolute right-8 bottom-8 w-24 h-24 text-charcoal/5 hidden md:block" />
 
           <div className="relative">
-            <div className="inline-flex items-center gap-2 bg-cream/10 border border-cream/20 rounded-full px-4 py-1.5 mb-6">
-              <Leaf className="w-3.5 h-3.5 text-sage" strokeWidth={2} />
-              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-cream/80">Pronta para começar?</span>
+            <div className="inline-flex items-center gap-2 bg-charcoal/5 border border-charcoal/10 rounded-full px-4 py-1.5 mb-6">
+              <Leaf className="w-3.5 h-3.5 text-charcoal" strokeWidth={2} />
+              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-charcoal/80">Pronta(o) para começar?</span>
             </div>
 
-            <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-cream mb-6 leading-tight max-w-2xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-6 leading-tight max-w-2xl mx-auto">
               Dê o primeiro passo{' '}
-              <span className="italic text-sage">para a sua transformação</span>
+              <span className="italic text-charcoal/70">para o seu bem-estar</span>
             </h2>
 
-            <p className="text-sm md:text-base font-light text-cream/60 max-w-lg mx-auto leading-relaxed mb-10">
-              Agende sua consulta e comece sua jornada rumo ao bem-estar emocional e uma vida mais equilibrada. Atendimento presencial e online.
+            <p className="text-sm md:text-base font-light text-charcoal/70 max-w-lg mx-auto leading-relaxed mb-10">
+              Agende sua consulta e inicie um percurso de autoconhecimento e elaboração de conflitos. Atendimento presencial e online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+                href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex items-center justify-center gap-3 bg-cream text-teal-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group inline-flex items-center justify-center gap-3 bg-charcoal text-cream px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-charcoal/90 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Phone className="w-4 h-4" />
                 Agendar via WhatsApp
@@ -650,15 +649,10 @@ function CtaSection() {
               </a>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 text-cream/50 text-xs font-medium">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 text-charcoal/50 text-xs font-medium">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>Seg à Sex: 08h - 20h</span>
-              </div>
-              <div className="hidden sm:block w-1 h-1 rounded-full bg-cream/30" />
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>Sáb: 08h - 12h</span>
+                <span>Horários flexíveis mediante agendamento</span>
               </div>
             </div>
           </div>
@@ -677,85 +671,88 @@ function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 md:mb-20 reveal-up">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-[1.5px] bg-teal" />
-            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-teal">Localização</span>
-            <div className="w-8 h-[1.5px] bg-teal" />
+            <div className="w-8 h-[1.5px] bg-rose" />
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-rose">Localização & Contato</span>
+            <div className="w-8 h-[1.5px] bg-rose" />
           </div>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-4 leading-tight">
-            Onde me <span className="italic text-teal">encontrar</span>
+            Onde me <span className="italic text-rose">encontrar</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal-up">
-          {/* Map */}
-          <div className="rounded-3xl overflow-hidden shadow-xl h-[350px] md:h-[450px] border border-charcoal/5">
+          {/* Contact info cards */}
+          <div className="flex flex-col gap-5">
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-rose/10 rounded-2xl flex items-center justify-center shrink-0">
+                <MapPin className="w-6 h-6 text-rose" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Consultório - Centro</h3>
+                <p className="text-sm font-light text-charcoal/60 leading-relaxed">
+                  Edifício MinasBank<br />
+                  Av. Goiás, 606 - Sala 609<br />
+                  Centro, Goiânia - GO, 74020-200
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-rose/10 rounded-2xl flex items-center justify-center shrink-0">
+                <MapPin className="w-6 h-6 text-rose" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Consultório - Setor Bueno</h3>
+                <p className="text-sm font-light text-charcoal/60 leading-relaxed">
+                  Edifício Monte Líbano Center<br />
+                  Av. T-63, 984<br />
+                  St. Bueno, Goiânia - GO, 74230-100
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-rose/10 rounded-2xl flex items-center justify-center shrink-0">
+                <Phone className="w-6 h-6 text-rose" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">WhatsApp</h3>
+                <a href="https://wa.me/5562982474553" target="_blank" rel="noreferrer" className="text-sm font-light text-rose hover:text-rose-dark transition-colors">
+                  (62) 98247-4553
+                </a>
+                <p className="text-xs text-charcoal/40 mt-1">Clique para agendar sua consulta</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-12 h-12 bg-rose/10 rounded-2xl flex items-center justify-center shrink-0">
+                <Instagram className="w-6 h-6 text-rose" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Instagram</h3>
+                <a href="https://www.instagram.com/psi.larissamaria/" target="_blank" rel="noreferrer" className="text-sm font-light text-rose hover:text-rose-dark transition-colors">
+                  @psi.larissamaria
+                </a>
+                <p className="text-xs text-charcoal/40 mt-1">Siga para mais conteúdos e reflexões</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Map Image / Component */}
+          {/* Substituting iframe for the more central/relevant location or a static elegant map placeholder */}
+          <div className="rounded-3xl overflow-hidden shadow-xl h-[350px] md:h-full border border-charcoal/5 min-h-[450px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.564903332165!2d-49.23190828456894!3d-16.660706088523293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1604a44b93f%3A0x673ed17b6a127f8a!2sPsic%C3%B3loga%20Girlania%20Vasconcelos!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.564903332165!2d-49.25590828456894!3d-16.660706088523293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1604a44b93f%3A0x673ed17b6a127f8a!2sGoi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização do consultório"
+              title="Localização Goiânia"
             />
           </div>
 
-          {/* Contact info cards */}
-          <div className="flex flex-col gap-5">
-            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-teal" strokeWidth={1.5} />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Consultório</h3>
-                <p className="text-sm font-light text-charcoal/60 leading-relaxed">
-                  Décima avenida Qd 67B, N•, 100 - LT 03<br />
-                  St. Leste Vila Nova<br />
-                  Goiânia - GO, 74645-040
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center shrink-0">
-                <Phone className="w-6 h-6 text-teal" strokeWidth={1.5} />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">WhatsApp</h3>
-                <a href="https://wa.me/5562991484224" target="_blank" rel="noreferrer" className="text-sm font-light text-teal hover:text-teal-dark transition-colors">
-                  (62) 99148-4224
-                </a>
-                <p className="text-xs text-charcoal/40 mt-1">Clique para iniciar uma conversa</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center shrink-0">
-                <Clock className="w-6 h-6 text-teal" strokeWidth={1.5} />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Horários</h3>
-                <p className="text-sm font-light text-charcoal/60 leading-relaxed">
-                  Segunda à Sexta: 08h às 22h<br />
-                  Atendimento com hora marcada
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-charcoal/[0.04] flex items-start gap-5 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-12 h-12 bg-teal/10 rounded-2xl flex items-center justify-center shrink-0">
-                <Instagram className="w-6 h-6 text-teal" strokeWidth={1.5} />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Instagram</h3>
-                <a href="https://www.instagram.com/psicologa_girlaniavasconcelos_/" target="_blank" rel="noreferrer" className="text-sm font-light text-teal hover:text-teal-dark transition-colors">
-                  @psicologa_girlaniavasconcelos_
-                </a>
-                <p className="text-xs text-charcoal/40 mt-1">Dicas, conteúdos e novidades</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -767,47 +764,47 @@ function ContactSection() {
    ════════════════════════════════════════════ */
 function Footer() {
   return (
-    <footer className="bg-teal-dark text-cream py-16 md:py-20 px-6 md:px-12">
+    <footer className="bg-charcoal text-cream py-16 md:py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-0">
 
           {/* Logo & description */}
           <div className="max-w-sm">
             <div className="flex items-center gap-2 mb-4">
-              <Brain className="w-5 h-5 text-sage" strokeWidth={1.5} />
-              <span className="font-serif text-2xl font-semibold">Girlania Vasconcelos</span>
+              <Brain className="w-5 h-5 text-rose" strokeWidth={1.5} />
+              <span className="font-serif text-2xl font-semibold">Larissa Maria</span>
             </div>
             <p className="text-sm font-light text-cream/50 leading-relaxed mb-6">
-              Psicóloga Clínica — CRP 09/21338<br />
-              Atendimento presencial em Goiânia e online para todo o Brasil. Foco em Ansiedade, Depressão e Saúde da Mulher.
+              Psicóloga e Psicanalista — CRP 09/13471<br />
+              Atendimento presencial em Goiânia (Centro e Bueno) e online para todo o Brasil. Foco em escuta analítica, ética e acolhimento.
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/psicologa_girlaniavasconcelos_/"
+                href="https://www.instagram.com/psi.larissamaria/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-cream/10 rounded-full flex items-center justify-center hover:bg-cream/20 transition-colors"
               >
-                <Instagram className="w-4 h-4" strokeWidth={1.5} />
+                <Instagram className="w-4 h-4 text-cream" strokeWidth={1.5} />
               </a>
               <a
-                href="https://wa.me/5562991484224"
+                href="https://wa.me/5562982474553"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-cream/10 rounded-full flex items-center justify-center hover:bg-cream/20 transition-colors"
               >
-                <Phone className="w-4 h-4" strokeWidth={1.5} />
+                <Phone className="w-4 h-4 text-cream" strokeWidth={1.5} />
               </a>
             </div>
           </div>
 
           {/* Quick links */}
           <div className="flex flex-col gap-3">
-            <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-sage mb-2">Navegação</h4>
-            {['Início', 'Sobre', 'Serviços', 'Método', 'Depoimentos', 'Contato'].map((item) => (
+            <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-rose mb-2">Navegação</h4>
+            {['Início', 'Sobre', 'Serviços', 'O Percurso', 'Contato'].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase().replace('í', 'i').replace('é', 'e')}`}
+                href={`#${item.toLowerCase().replace('í', 'i').replace('é', 'e').replace(' ', '-')}`}
                 className="text-sm text-cream/50 hover:text-cream transition-colors font-light"
               >
                 {item}
@@ -817,12 +814,12 @@ function Footer() {
 
           {/* Contact info */}
           <div className="flex flex-col gap-3">
-            <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-sage mb-2">Contato</h4>
-            <a href="https://wa.me/5562991484224" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5" /> (62) 99148-4224
+            <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-rose mb-2">Contato</h4>
+            <a href="https://wa.me/5562982474553" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5" /> (62) 98247-4553
             </a>
-            <a href="https://www.instagram.com/psicologa_girlaniavasconcelos_/" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
-              <Instagram className="w-3.5 h-3.5" /> @psicologa_girlaniavasconcelos_
+            <a href="https://www.instagram.com/psi.larissamaria/" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
+              <Instagram className="w-3.5 h-3.5" /> @psi.larissamaria
             </a>
             <p className="text-sm text-cream/50 font-light flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5" /> Goiânia, GO
@@ -832,8 +829,8 @@ function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-cream/30">
-          <p>© 2026 Girlania Vasconcelos — Psicóloga Clínica. Todos os direitos reservados.</p>
-          <p>CRP 09/21338</p>
+          <p>© 2026 Larissa Maria — Psicóloga e Psicanalista. Todos os direitos reservados.</p>
+          <p>CRP 09/13471</p>
         </div>
       </div>
     </footer>
@@ -846,7 +843,7 @@ function Footer() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+      href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-transform duration-300 group"
@@ -868,7 +865,7 @@ export default function App() {
   useReveal();
 
   return (
-    <div className="bg-cream min-h-screen text-charcoal font-sans font-light selection:bg-teal selection:text-cream">
+    <div className="bg-cream min-h-screen text-charcoal font-sans font-light selection:bg-rose selection:text-cream">
       <Navbar />
       <HeroSection />
       <MarqueeSection />
