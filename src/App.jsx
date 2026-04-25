@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Leaf, Heart, Apple, Clock, MapPin, Phone, Instagram, ChevronDown, Star, Users, Award, CalendarCheck, MessageCircle, Activity } from 'lucide-react';
+import { ArrowRight, Leaf, Heart, Brain, Clock, MapPin, Phone, Instagram, ChevronDown, Star, Users, Award, CalendarCheck, MessageCircle, Smile, Activity } from 'lucide-react';
 import './index.css';
 
 /* ════════════════════════════════════════════
@@ -89,9 +89,9 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <Leaf className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-teal' : 'text-teal'}`} strokeWidth={1.5} />
+          <Brain className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-teal' : 'text-teal'}`} strokeWidth={1.5} />
           <span className={`font-serif text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-teal-dark' : 'text-teal-dark'}`}>
-            Alíssia Rachel
+            Girlania Vasconcelos
           </span>
         </a>
 
@@ -107,7 +107,7 @@ function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/5531984874823?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+            href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
             target="_blank"
             rel="noreferrer"
             className="ml-4 bg-teal text-cream px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-teal-dark transition-all duration-300 hover:shadow-lg hover:shadow-teal/20"
@@ -142,7 +142,7 @@ function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/5531984874823?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+            href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
             target="_blank"
             rel="noreferrer"
             onClick={() => setMenuOpen(false)}
@@ -173,24 +173,24 @@ function HeroSection() {
           {/* Text content */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 pb-10 lg:pb-0">
             <div className="inline-flex items-center gap-2 bg-teal/[0.08] border border-teal/10 rounded-full px-4 py-1.5 mb-6">
-              <Leaf className="w-3.5 h-3.5 text-teal" strokeWidth={2} />
-              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-teal">Nutrição Clínica • CRN 35314/P</span>
+              <Brain className="w-3.5 h-3.5 text-teal" strokeWidth={2} />
+              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-teal">Psicologia Clínica • CRP 09/21338</span>
             </div>
 
-            <h1 className="font-serif text-[2.8rem] md:text-6xl lg:text-[5.5rem] leading-[1.05] mb-6 text-charcoal">
-              Apaixone-se por{' '}
-              <span className="italic text-teal">cuidar</span>
+            <h1 className="font-serif text-[2.8rem] md:text-6xl lg:text-[5.5rem] leading-[1.05] mb-6 text-charcoal break-words">
+              Um espaço de{' '}
+              <span className="italic text-teal">acolhimento</span>
               <br />
-              de si mesmo
+              só seu
             </h1>
 
             <p className="text-base md:text-lg font-light text-charcoal/70 max-w-lg leading-relaxed mb-8">
-              Alcance seus objetivos e transforme sua relação com a alimentação. Atendimento presencial em Belo Horizonte e consultas online para todo o Brasil.
+              Tratamento especializado para Ansiedade e Depressão com foco na Saúde Mental da Mulher. Atendimento presencial em Goiânia e online para todo o Brasil.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <a
-                href="https://wa.me/5531984874823?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+                href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-center gap-3 bg-teal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-teal-dark transition-all duration-300 shadow-lg shadow-teal/20 hover:shadow-xl hover:shadow-teal/30"
@@ -210,13 +210,13 @@ function HeroSection() {
             {/* Trust badges */}
             <div className="flex items-center gap-6 mt-10 pt-8 border-t border-charcoal/10">
               <div className="text-center">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">+1000</p>
-                <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Pacientes</p>
+                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">100%</p>
+                <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Acolhimento</p>
               </div>
               <div className="h-8 w-[1px] bg-charcoal/10" />
               <div className="text-center">
-                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">UFMG</p>
-                <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Formação</p>
+                <p className="font-serif text-2xl md:text-3xl font-bold text-teal">TCC</p>
+                <p className="text-[9px] uppercase tracking-widest text-charcoal/50 font-medium">Abordagem</p>
               </div>
               <div className="h-8 w-[1px] bg-charcoal/10" />
               <div className="text-center">
@@ -234,9 +234,9 @@ function HeroSection() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-terracotta/5 to-transparent rounded-[40px] md:rounded-[60px] -rotate-2" />
 
               <img
-                src="/fotos/Screenshot_1.png"
-                alt="Alíssia Rachel - Nutricionista"
-                className="relative w-full aspect-[3/4] object-cover rounded-[30px] md:rounded-[50px] shadow-2xl shadow-charcoal/10"
+                src="/fotos/Girlania1.png"
+                alt="Girlania Vasconcelos - Psicóloga"
+                className="relative w-full max-w-full aspect-[3/4] object-cover rounded-[30px] md:rounded-[50px] shadow-2xl shadow-charcoal/10"
               />
 
               {/* Floating card overlay */}
@@ -246,8 +246,8 @@ function HeroSection() {
                     <Heart className="w-5 h-5 text-teal" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-charcoal">Nutrição Humanizada</p>
-                    <p className="text-[10px] text-charcoal/50">Cuidado individualizado</p>
+                    <p className="text-xs font-semibold text-charcoal">Saúde da Mulher</p>
+                    <p className="text-[10px] text-charcoal/50">Cuidado especializado</p>
                   </div>
                 </div>
               </div>
@@ -255,8 +255,8 @@ function HeroSection() {
               {/* Floating card right */}
               <div className="absolute -top-2 -right-2 md:top-4 md:-right-6 bg-white/90 backdrop-blur-md rounded-2xl p-3 md:p-4 shadow-xl border border-white/50 animate-float" style={{ animationDelay: '-3s' }}>
                 <div className="flex items-center gap-2">
-                  <Apple className="w-5 h-5 text-terracotta" strokeWidth={1.5} />
-                  <span className="text-[10px] font-semibold text-charcoal uppercase tracking-wider">Plano Alimentar<br/>Personalizado</span>
+                  <Brain className="w-5 h-5 text-terracotta" strokeWidth={1.5} />
+                  <span className="text-[10px] font-semibold text-charcoal uppercase tracking-wider">Terapia<br/>Cognitivo-Comportamental</span>
                 </div>
               </div>
             </div>
@@ -288,14 +288,14 @@ function AboutSection() {
             <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="absolute -inset-6 bg-teal/5 rounded-[50px] -rotate-3" />
               <img
-                src="/fotos/Screenshot_2.png"
-                alt="Alíssia Rachel no consultório"
-                className="relative w-full aspect-[4/5] object-cover rounded-[40px] shadow-xl"
+                src="/fotos/Girlania2.png"
+                alt="Girlania Vasconcelos"
+                className="relative w-full max-w-full aspect-[4/5] object-cover rounded-[40px] shadow-xl"
               />
               {/* Experience badge */}
               <div className="absolute -bottom-6 right-4 md:right-0 bg-teal text-cream rounded-2xl p-5 shadow-xl">
-                <p className="font-serif text-3xl font-bold">UFMG</p>
-                <p className="text-[10px] uppercase tracking-widest opacity-80">Formação</p>
+                <p className="font-serif text-3xl font-bold">TCC</p>
+                <p className="text-[10px] uppercase tracking-widest opacity-80">Especialista</p>
               </div>
             </div>
           </div>
@@ -307,25 +307,25 @@ function AboutSection() {
               <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-teal">Sobre Mim</span>
             </div>
 
-            <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-6 leading-[1.1]">
+            <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-charcoal mb-6 leading-[1.1] break-words">
               Olá, eu sou a{' '}
-              <span className="italic text-teal">Alíssia Rachel</span>
+              <span className="italic text-teal">Girlania Vasconcelos</span>
             </h2>
 
             <p className="text-sm md:text-base font-light text-charcoal/70 leading-relaxed mb-5">
-              Sou nutricionista clínica formada pela Universidade Federal de Minas Gerais (UFMG), registrada sob o CRN 35314/P. Minha missão é ajudar você a construir uma relação saudável e prazerosa com a alimentação.
+              Sou Psicóloga Clínica (CRP 09/21338), dedicada a ajudar mulheres a reencontrarem o equilíbrio emocional, tratando quadros de ansiedade e depressão.
             </p>
 
             <p className="text-sm md:text-base font-light text-charcoal/70 leading-relaxed mb-8">
-              Acredito que a nutrição vai muito além de dietas restritivas. Trabalho de forma humanizada e personalizada, respeitando sua individualidade, rotina e preferências — porque comer bem deve ser um prazer, não uma obrigação.
+              Através da Terapia Cognitivo-Comportamental (TCC), trabalho para oferecer um espaço seguro e acolhedor, focado na sua saúde mental, promovendo mudanças reais e um maior bem-estar para o seu dia a dia.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
-                { icon: <Award className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'CRN 35314/P' },
-                { icon: <Users className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: '+1000 pacientes' },
+                { icon: <Award className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'CRP 09/21338' },
+                { icon: <Brain className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Especialista em TCC' },
                 { icon: <CalendarCheck className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Presencial & Online' },
-                { icon: <Heart className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Abordagem Humanizada' },
+                { icon: <Heart className="w-5 h-5 text-teal" strokeWidth={1.5} />, text: 'Saúde da Mulher' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-cream/80 rounded-xl px-4 py-3 border border-teal/5">
                   {item.icon}
@@ -335,7 +335,7 @@ function AboutSection() {
             </div>
 
             <a
-              href="https://wa.me/5531984874823?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
+              href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-3 bg-teal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-teal-dark transition-all duration-300 shadow-lg shadow-teal/20"
@@ -357,7 +357,7 @@ function AboutSection() {
    MARQUEE / INFINITE SCROLL TEXT
    ════════════════════════════════════════════ */
 function MarqueeSection() {
-  const items = ['Nutrição Clínica', '•', 'Emagrecimento', '•', 'Saúde Intestinal', '•', 'Nutrição Esportiva', '•', 'Reeducação Alimentar', '•', 'Nutrição Funcional', '•'];
+  const items = ['Terapia Cognitivo-Comportamental', '•', 'Ansiedade', '•', 'Depressão', '•', 'Saúde Mental da Mulher', '•', 'Atendimento Online', '•', 'Acolhimento', '•'];
   return (
     <div className="bg-teal py-5 overflow-hidden relative">
       <div className="flex animate-ticker whitespace-nowrap">
@@ -377,39 +377,39 @@ function MarqueeSection() {
 function ServicesSection() {
   const services = [
     {
-      icon: <Apple className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Nutrição Clínica',
-      desc: 'Avaliação completa do estado nutricional com plano alimentar individualizado. Tratamento de doenças crônicas, alergias e intolerâncias alimentares.',
+      icon: <Brain className="w-8 h-8" strokeWidth={1.2} />,
+      title: 'Tratamento de Ansiedade',
+      desc: 'Estratégias eficazes para lidar com crises de pânico, preocupação excessiva e medos constantes, promovendo estabilidade emocional.',
       accent: 'from-teal/10 to-sage/10',
     },
     {
       icon: <Heart className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Emagrecimento Saudável',
-      desc: 'Alcance seu peso ideal de forma sustentável, sem dietas restritivas. Foco em mudança de hábitos e educação alimentar para resultados duradouros.',
+      title: 'Tratamento de Depressão',
+      desc: 'Acolhimento e intervenções baseadas em evidências para superar a apatia, tristeza profunda e recuperar a vitalidade e sentido de vida.',
       accent: 'from-terracotta/10 to-sand/20',
     },
     {
-      icon: <Leaf className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Nutrição Funcional',
-      desc: 'Abordagem integrativa que investiga a raiz dos desequilíbrios nutricionais. Modulação intestinal, anti-inflamatória e melhora da qualidade de vida.',
+      icon: <Smile className="w-8 h-8" strokeWidth={1.2} />,
+      title: 'Saúde Mental da Mulher',
+      desc: 'Um espaço de escuta sem julgamentos para tratar sobrecargas, autoestima, relacionamentos e questões específicas do universo feminino.',
       accent: 'from-sage/15 to-teal/5',
     },
     {
       icon: <Activity className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Nutrição Esportiva',
-      desc: 'Potencialize sua performance e recuperação com estratégias nutricionais voltadas ao seu esporte e objetivos de composição corporal.',
+      title: 'Terapia Cognitivo-Comportamental',
+      desc: 'Abordagem focada no presente, estruturada e diretiva, que visa identificar e modificar padrões de pensamentos e comportamentos disfuncionais.',
       accent: 'from-teal/8 to-terracotta/8',
     },
     {
       icon: <Users className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Reeducação Alimentar',
-      desc: 'Aprenda a comer com consciência e prazer. Desenvolvemos juntos uma relação mais equilibrada e feliz com a sua alimentação.',
+      title: 'Desenvolvimento Pessoal',
+      desc: 'Aperfeiçoamento da inteligência emocional, habilidades sociais e autoconhecimento para uma vida mais equilibrada e relacionamentos saudáveis.',
       accent: 'from-sand/20 to-cream/50',
     },
     {
       icon: <CalendarCheck className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Consulta Online',
-      desc: 'Atendimento nutricional completo de qualquer lugar do Brasil. Mesma qualidade e dedicação do atendimento presencial, no conforto da sua casa.',
+      title: 'Psicoterapia Online',
+      desc: 'Sessões terapêuticas completas de qualquer lugar do Brasil ou do mundo, com a mesma qualidade e ética do atendimento presencial.',
       accent: 'from-teal/10 to-sage/5',
     },
   ];
@@ -467,23 +467,23 @@ function MethodSection() {
   const steps = [
     {
       step: '01',
-      title: 'Avaliação Completa',
-      desc: 'Realizamos uma anamnese detalhada, analisando seus exames, histórico de saúde, rotina e objetivos pessoais.',
+      title: 'Acolhimento',
+      desc: 'Nossa primeira sessão é focada em entender sua história, suas queixas principais e criar um vínculo de confiança mútuo.',
     },
     {
       step: '02',
-      title: 'Plano Personalizado',
-      desc: 'Desenvolvo um plano alimentar 100% individualizado, respeitando suas preferências, cultura alimentar e estilo de vida.',
+      title: 'Avaliação',
+      desc: 'Identificamos os padrões de pensamento e comportamento que estão mantendo sua ansiedade ou depressão.',
     },
     {
       step: '03',
-      title: 'Acompanhamento Contínuo',
-      desc: 'Retornos regulares para ajustes, suporte via WhatsApp e orientações para que você nunca se sinta sozinho(a) nessa jornada.',
+      title: 'Intervenção',
+      desc: 'Aplicamos técnicas baseadas em evidências da TCC para reestruturar pensamentos e promover regulação emocional.',
     },
     {
       step: '04',
-      title: 'Resultados Sustentáveis',
-      desc: 'Construímos juntos hábitos saudáveis e duradouros, que irão transformar a forma como você se alimenta e vive.',
+      title: 'Autonomia',
+      desc: 'Desenvolvemos suas habilidades de enfrentamento, para que você seja sua própria terapeuta no dia a dia.',
     },
   ];
 
@@ -542,19 +542,19 @@ function MethodSection() {
 function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'Mariana S.',
-      text: 'A Alíssia mudou completamente minha relação com a comida. Emagreci 12kg sem fazer nenhuma dieta maluca. O acompanhamento dela é incrível!',
-      role: 'Paciente há 8 meses',
+      name: 'A. C.',
+      text: 'A terapia com a Girlania mudou a minha vida. Consegui entender e controlar minhas crises de ansiedade. Me sinto muito mais leve hoje.',
+      role: 'Paciente Online',
     },
     {
-      name: 'Lucas R.',
-      text: 'Procurava uma nutricionista esportiva e encontrei muito mais. A Alíssia entende exatamente o que você precisa e adapta tudo à sua rotina.',
-      role: 'Atleta amador',
+      name: 'L. M.',
+      text: 'O acolhimento que recebi fez toda a diferença no tratamento da minha depressão. Um espaço seguro onde pude ser eu mesma, sem julgamentos.',
+      role: 'Paciente Presencial',
     },
     {
-      name: 'Patricia M.',
-      text: 'Melhor investimento que fiz na minha saúde. A consulta online tem a mesma qualidade que presencial. Super recomendo!',
-      role: 'Consulta online',
+      name: 'S. F.',
+      text: 'Excelente profissional! A Terapia Cognitivo-Comportamental me ajudou a organizar meus pensamentos e recuperar minha autoestima.',
+      role: 'Paciente Online',
     },
   ];
 
@@ -634,12 +634,12 @@ function CtaSection() {
             </h2>
 
             <p className="text-sm md:text-base font-light text-cream/60 max-w-lg mx-auto leading-relaxed mb-10">
-              Agende sua consulta e comece sua jornada rumo a uma alimentação equilibrada e uma vida mais saudável. Atendimento presencial e online.
+              Agende sua consulta e comece sua jornada rumo ao bem-estar emocional e uma vida mais equilibrada. Atendimento presencial e online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5531984874823?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+                href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
                 target="_blank"
                 rel="noreferrer"
                 className="group inline-flex items-center justify-center gap-3 bg-cream text-teal-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -690,7 +690,7 @@ function ContactSection() {
           {/* Map */}
           <div className="rounded-3xl overflow-hidden shadow-xl h-[350px] md:h-[450px] border border-charcoal/5">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.9!2d-43.9418!3d-19.9225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU1JzIxLjAiUyA0M8KwNTYnMzAuNSJX!5e0!3m2!1spt-BR!2sbr!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.564903332165!2d-49.23190828456894!3d-16.660706088523293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1604a44b93f%3A0x673ed17b6a127f8a!2sPsic%C3%B3loga%20Girlania%20Vasconcelos!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -710,9 +710,9 @@ function ContactSection() {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Consultório</h3>
                 <p className="text-sm font-light text-charcoal/60 leading-relaxed">
-                  Av. Augusto de Lima, 479<br />
-                  R. Francisco Dumont, 460 — Centro<br />
-                  Belo Horizonte, MG
+                  Décima avenida Qd 67B, N•, 100 - LT 03<br />
+                  St. Leste Vila Nova<br />
+                  Goiânia - GO, 74645-040
                 </p>
               </div>
             </div>
@@ -723,8 +723,8 @@ function ContactSection() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">WhatsApp</h3>
-                <a href="https://wa.me/5531984874823" target="_blank" rel="noreferrer" className="text-sm font-light text-teal hover:text-teal-dark transition-colors">
-                  (31) 98487-4823
+                <a href="https://wa.me/5562991484224" target="_blank" rel="noreferrer" className="text-sm font-light text-teal hover:text-teal-dark transition-colors">
+                  (62) 99148-4224
                 </a>
                 <p className="text-xs text-charcoal/40 mt-1">Clique para iniciar uma conversa</p>
               </div>
@@ -737,8 +737,8 @@ function ContactSection() {
               <div>
                 <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Horários</h3>
                 <p className="text-sm font-light text-charcoal/60 leading-relaxed">
-                  Segunda à Sexta: 08h às 20h<br />
-                  Sábado: 08h às 12h
+                  Segunda à Sexta: 08h às 22h<br />
+                  Atendimento com hora marcada
                 </p>
               </div>
             </div>
@@ -749,8 +749,8 @@ function ContactSection() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-charcoal mb-1">Instagram</h3>
-                <a href="https://www.instagram.com/alissiarachel/" target="_blank" rel="noreferrer" className="text-sm font-light text-teal hover:text-teal-dark transition-colors">
-                  @alissiarachel
+                <a href="https://www.instagram.com/psicologa_girlaniavasconcelos_/" target="_blank" rel="noreferrer" className="text-sm font-light text-teal hover:text-teal-dark transition-colors">
+                  @psicologa_girlaniavasconcelos_
                 </a>
                 <p className="text-xs text-charcoal/40 mt-1">Dicas, conteúdos e novidades</p>
               </div>
@@ -774,16 +774,16 @@ function Footer() {
           {/* Logo & description */}
           <div className="max-w-sm">
             <div className="flex items-center gap-2 mb-4">
-              <Leaf className="w-5 h-5 text-sage" strokeWidth={1.5} />
-              <span className="font-serif text-2xl font-semibold">Alíssia Rachel</span>
+              <Brain className="w-5 h-5 text-sage" strokeWidth={1.5} />
+              <span className="font-serif text-2xl font-semibold">Girlania Vasconcelos</span>
             </div>
             <p className="text-sm font-light text-cream/50 leading-relaxed mb-6">
-              Nutricionista Clínica — CRN 35314/P<br />
-              Formada pela UFMG. Atendimento presencial em BH e online para todo o Brasil.
+              Psicóloga Clínica — CRP 09/21338<br />
+              Atendimento presencial em Goiânia e online para todo o Brasil. Foco em Ansiedade, Depressão e Saúde da Mulher.
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/alissiarachel/"
+                href="https://www.instagram.com/psicologa_girlaniavasconcelos_/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-cream/10 rounded-full flex items-center justify-center hover:bg-cream/20 transition-colors"
@@ -791,7 +791,7 @@ function Footer() {
                 <Instagram className="w-4 h-4" strokeWidth={1.5} />
               </a>
               <a
-                href="https://wa.me/5531984874823"
+                href="https://wa.me/5562991484224"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-cream/10 rounded-full flex items-center justify-center hover:bg-cream/20 transition-colors"
@@ -818,22 +818,22 @@ function Footer() {
           {/* Contact info */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-sage mb-2">Contato</h4>
-            <a href="https://wa.me/5531984874823" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5" /> (31) 98487-4823
+            <a href="https://wa.me/5562991484224" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5" /> (62) 99148-4224
             </a>
-            <a href="https://www.instagram.com/alissiarachel/" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
-              <Instagram className="w-3.5 h-3.5" /> @alissiarachel
+            <a href="https://www.instagram.com/psicologa_girlaniavasconcelos_/" target="_blank" rel="noreferrer" className="text-sm text-cream/50 hover:text-cream transition-colors font-light flex items-center gap-2">
+              <Instagram className="w-3.5 h-3.5" /> @psicologa_girlaniavasconcelos_
             </a>
             <p className="text-sm text-cream/50 font-light flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5" /> Belo Horizonte, MG
+              <MapPin className="w-3.5 h-3.5" /> Goiânia, GO
             </p>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-cream/30">
-          <p>© 2026 Alíssia Rachel — Nutricionista Clínica. Todos os direitos reservados.</p>
-          <p>CRN 35314/P</p>
+          <p>© 2026 Girlania Vasconcelos — Psicóloga Clínica. Todos os direitos reservados.</p>
+          <p>CRP 09/21338</p>
         </div>
       </div>
     </footer>
@@ -846,7 +846,7 @@ function Footer() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/5531984874823?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+      href="https://wa.me/5562991484224?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-transform duration-300 group"

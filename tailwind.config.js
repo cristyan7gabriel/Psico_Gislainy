@@ -7,16 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'cream': '#F9F7F2',
-        'cream-dark': '#F0EDE6',
-        'teal': '#3D5A5A',
-        'teal-dark': '#2C4343',
-        'teal-light': '#4A6B6B',
-        'terracotta': '#C4836A',
-        'terracotta-light': '#D4A08B',
-        'sand': '#D4C5B0',
-        'sage': '#8FA89A',
-        'charcoal': '#2A2A2A',
+        'cream': '#FCFAFC',
+        'cream-dark': '#F4EEF4',
+        'teal': '#8374A6', // was teal, now lavender
+        'teal-dark': '#5B4E7A', // was teal-dark, now dark lavender
+        'teal-light': '#AFA2C9', // was teal-light, now light lavender
+        'terracotta': '#C99EAB', // was terracotta, now muted rose
+        'terracotta-light': '#DAB4BF', // was terracotta-light
+        'sand': '#E2D1C8', // was sand, now soft beige
+        'sage': '#B19CB3', // was sage, now soft mauve
+        'charcoal': '#2A282C', // charcoal with a slight purple tint
       },
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
