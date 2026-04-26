@@ -65,7 +65,7 @@ function useReveal() {
 /* ════════════════════════════════════════════
    NAVIGATION
    ════════════════════════════════════════════ */
-function Navbar() {
+function Navbar({ onOpenModal }) {
   const [scrolled, setScrolled] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(false);
 
@@ -84,81 +84,83 @@ function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-cream/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
-          <Brain className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-rose' : 'text-rose'}`} strokeWidth={1.5} />
-          <span className={`font-serif text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-charcoal' : 'text-charcoal'}`}>
-            Larissa Maria
-          </span>
-        </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-xs uppercase tracking-[0.15em] font-medium text-charcoal/70 hover:text-rose transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-rose after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-4 bg-charcoal text-cream px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-charcoal/90 transition-all duration-300 hover:shadow-lg hover:shadow-charcoal/20"
-          >
-            Agendar Consulta
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-cream/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+          {/* Logo */}
+          <a href="#home" className="flex items-center gap-2 group">
+            <Brain className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-rose' : 'text-rose'}`} strokeWidth={1.5} />
+            <span className={`font-serif text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-charcoal' : 'text-charcoal'}`}>
+              Larissa Maria
+            </span>
           </a>
+
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-xs uppercase tracking-[0.15em] font-medium text-charcoal/70 hover:text-rose transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-rose after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {link.label}
+              </a>
+            ))}
+            <button
+              onClick={onOpenModal}
+              className="ml-4 bg-charcoal text-cream px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-charcoal/90 transition-all duration-300 hover:shadow-lg hover:shadow-charcoal/20"
+            >
+              Agendar Consulta
+            </button>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden flex flex-col gap-1.5 p-2"
+            aria-label="Menu"
+          >
+            <span className={`block w-6 h-[2px] bg-charcoal transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[5px]' : ''}`} />
+            <span className={`block w-6 h-[2px] bg-charcoal transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-6 h-[2px] bg-charcoal transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[5px]' : ''}`} />
+          </button>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Menu"
-        >
-          <span className={`block w-6 h-[2px] bg-charcoal transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[5px]' : ''}`} />
-          <span className={`block w-6 h-[2px] bg-charcoal transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-[2px] bg-charcoal transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[5px]' : ''}`} />
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      <div className={`lg:hidden overflow-hidden transition-all duration-500 ${menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="bg-cream/98 backdrop-blur-lg px-6 py-6 flex flex-col gap-4 border-t border-rose/10">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-sm uppercase tracking-widest font-medium text-charcoal/80 hover:text-rose transition-colors py-2"
+        {/* Mobile menu */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ${menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="bg-cream/98 backdrop-blur-lg px-6 py-6 flex flex-col gap-4 border-t border-rose/10">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-sm uppercase tracking-widest font-medium text-charcoal/80 hover:text-rose transition-colors py-2"
+              >
+                {link.label}
+              </a>
+            ))}
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                onOpenModal();
+              }}
+              className="mt-2 bg-charcoal text-cream px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold text-center hover:bg-charcoal/90 transition-all"
             >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => setMenuOpen(false)}
-            className="mt-2 bg-charcoal text-cream px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold text-center hover:bg-charcoal/90 transition-all"
-          >
-            Agendar Consulta
-          </a>
+              Agendar Consulta
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Modal de Pré-Agendamento */}
+    </>
   );
 }
 
 /* ════════════════════════════════════════════
    HERO SECTION
    ════════════════════════════════════════════ */
-function HeroSection() {
+function HeroSection({ onOpenModal }) {
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-cream overflow-hidden pt-20">
       {/* Background decorative elements */}
@@ -188,15 +190,13 @@ function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <a
-                href="https://wa.me/5562982474553?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
-                target="_blank"
-                rel="noreferrer"
+              <button
+                onClick={onOpenModal}
                 className="group flex items-center justify-center gap-3 bg-charcoal text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-charcoal/90 transition-all duration-300 shadow-lg shadow-charcoal/20 hover:shadow-xl hover:shadow-charcoal/30"
               >
                 Agendar Consulta
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
               <a
                 href="#sobre"
                 className="group flex items-center justify-center gap-3 border-2 border-rose/20 text-rose-dark px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-rose/5 transition-all duration-300"
@@ -861,13 +861,63 @@ function WhatsAppFloat() {
 /* ════════════════════════════════════════════
    MAIN APP
    ════════════════════════════════════════════ */
+function PreBookingModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+  
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-charcoal/40 backdrop-blur-sm">
+      <div className="bg-cream rounded-3xl p-8 max-w-md w-full shadow-2xl border border-rose/10 relative">
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-charcoal/5 text-charcoal/50 hover:bg-charcoal/10 hover:text-charcoal transition-colors"
+        >
+          ✕
+        </button>
+        
+        <div className="w-12 h-12 bg-rose/10 rounded-full flex items-center justify-center mb-6">
+          <CalendarCheck className="w-6 h-6 text-rose" />
+        </div>
+        
+        <h3 className="font-serif text-2xl text-charcoal mb-3">Pré-Agendamento</h3>
+        
+        <div className="space-y-4 text-sm font-light text-charcoal/70 mb-8">
+          <p>Você será redirecionado para a nossa agenda para escolher um horário disponível.</p>
+          <div className="bg-rose/5 p-4 rounded-xl border border-rose/10">
+            <p className="font-medium text-charcoal mb-1">Atenção Importante:</p>
+            <p>Esta etapa é um <strong>pré-agendamento</strong>. É fundamental que você preencha seu <strong>número de WhatsApp corretamente</strong>, pois a psicóloga entrará em contato por ele para confirmar a sua consulta.</p>
+          </div>
+        </div>
+        
+        <div className="flex flex-col gap-3">
+          <a 
+            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Lg5ObHe6jZ2KBmLsKgj7gjjLhGW96RRIlItSNJBzEFm1GB0aNA1qTHC5pzYJV9lDja48pO-ZM?gv=true"
+            target="_blank"
+            rel="noreferrer"
+            onClick={onClose}
+            className="bg-charcoal text-cream w-full py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold text-center hover:bg-charcoal/90 transition-all shadow-lg"
+          >
+            Entendi, ir para a agenda
+          </a>
+          <button 
+            onClick={onClose}
+            className="text-xs uppercase tracking-widest font-semibold text-charcoal/60 hover:text-charcoal transition-colors py-2"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   useReveal();
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
     <div className="bg-cream min-h-screen text-charcoal font-sans font-light selection:bg-rose selection:text-cream">
-      <Navbar />
-      <HeroSection />
+      <Navbar onOpenModal={() => setIsModalOpen(true)} />
+      <HeroSection onOpenModal={() => setIsModalOpen(true)} />
       <MarqueeSection />
       <AboutSection />
       <ServicesSection />
@@ -877,6 +927,7 @@ export default function App() {
       <ContactSection />
       <Footer />
       <WhatsAppFloat />
+      <PreBookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
