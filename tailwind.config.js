@@ -7,23 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        rose: {
-          DEFAULT: '#C19A98',
-          dark: '#A88280',
+        sage: {
+          light: '#E6EBE6',
+          DEFAULT: '#5B7070',
+          dark: '#3D4D4D',
+        },
+        terracotta: {
+          light: '#F5E6E1',
+          DEFAULT: '#C98E7B',
+          dark: '#A66E5B',
         },
         beige: {
-          DEFAULT: '#E6D8CE',
-          dark: '#D1C0B4',
+          light: '#FCFBF7',
+          DEFAULT: '#F4EFE6',
+          dark: '#E8E1D5',
         },
-        cream: {
-          DEFAULT: '#FAF7F2',
-          dark: '#F4EFE6'
-        },
-        charcoal: '#2D2B2A',
+        graphite: '#2D2926',
+        charcoal: '#2D2B2A', // Keep for compatibility or replace if used elsewhere
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Lora', 'serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
