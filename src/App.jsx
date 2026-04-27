@@ -334,7 +334,7 @@ function AboutSection() {
             </div>
 
             <a
-              href="https://wa.me/5562999616626?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
+              href="https://wa.me/5562999005565?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-3 bg-graphite text-beige-light px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-graphite/90 transition-all duration-300 shadow-lg shadow-graphite/20"
@@ -638,7 +638,7 @@ function CtaSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5562999616626?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+                href="https://wa.me/5562999005565?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20agendar%20uma%20consulta!"
                 target="_blank"
                 rel="noreferrer"
                 className="group inline-flex items-center justify-center gap-3 bg-beige-light text-graphite px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-beige-light/90 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -717,8 +717,8 @@ function ContactSection() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-graphite mb-1">WhatsApp</h3>
-                <a href="https://wa.me/5562999616626" target="_blank" rel="noreferrer" className="text-sm font-light text-sage hover:text-sage-dark transition-colors">
-                  (62) 99961-6626
+                <a href="https://wa.me/5562999005565" target="_blank" rel="noreferrer" className="text-sm font-light text-sage hover:text-sage-dark transition-colors">
+                  (62) 99900-5565
                 </a>
                 <p className="text-xs text-graphite/40 mt-1">Clique para agendar sua consulta</p>
               </div>
@@ -788,7 +788,7 @@ function Footer() {
                 <Instagram className="w-4 h-4 text-beige-light" strokeWidth={1.5} />
               </a>
               <a
-                href="https://wa.me/5562999616626"
+                href="https://wa.me/5562999005565"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-beige-light/10 rounded-full flex items-center justify-center hover:bg-beige-light/20 transition-colors"
@@ -815,8 +815,8 @@ function Footer() {
           {/* Contact info */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-sage mb-2">Contato</h4>
-            <a href="https://wa.me/5562999616626" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5" /> (62) 99961-6626
+            <a href="https://wa.me/5562999005565" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5" /> (62) 99900-5565
             </a>
             <a href="https://www.instagram.com/psigispamplona/" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
               <Instagram className="w-3.5 h-3.5" /> @psigispamplona
@@ -843,7 +843,7 @@ function Footer() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/5562999616626?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+      href="https://wa.me/5562999005565?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20agendar%20uma%20consulta!"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-transform duration-300 group"
