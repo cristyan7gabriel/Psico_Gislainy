@@ -91,7 +91,7 @@ function Navbar({ onOpenModal }) {
           <a href="#home" className="flex items-center gap-2 group">
             <Palette className={`w-5 h-5 transition-colors duration-300 ${scrolled ? 'text-sage' : 'text-sage'}`} strokeWidth={1.5} />
             <span className={`font-serif text-xl md:text-2xl font-semibold tracking-wide transition-colors duration-300 ${scrolled ? 'text-graphite' : 'text-graphite'}`}>
-              Luana Brant
+              Gislainy Pamplona
             </span>
           </a>
 
@@ -175,7 +175,7 @@ function HeroSection({ onOpenModal }) {
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 pb-10 lg:pb-0">
             <div className="inline-flex items-center gap-2 bg-sage/[0.08] border border-sage/10 rounded-full px-4 py-1.5 mb-6">
               <Palette className="w-3.5 h-3.5 text-sage" strokeWidth={2} />
-              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-sage">Psicóloga & Arteterapeuta • CRP 09/17500</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-sage">Psicóloga & Psicanalista • CRP 09/17366</span>
             </div>
 
             <h1 className="font-serif text-[2.8rem] md:text-6xl lg:text-[5.5rem] leading-[1.05] mb-6 text-graphite break-words">
@@ -186,7 +186,7 @@ function HeroSection({ onOpenModal }) {
             </h1>
 
             <p className="text-base md:text-lg font-light text-graphite/70 max-w-lg leading-relaxed mb-8">
-              Psicoterapia com ênfase em Arteterapia e TDAH Adulto. Um espaço seguro para criar novos sentidos e percorrer caminhos de autoconhecimento. Presencial em Goiânia e Online.
+              Psicoterapia com ênfase em Psicanálise e Ansiedade & Depressão. Um espaço seguro para criar novos sentidos e percorrer caminhos de autoconhecimento. Presencial em Goiânia e Online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -233,8 +233,8 @@ function HeroSection({ onOpenModal }) {
               <div className="absolute -inset-4 bg-gradient-to-tr from-beige-dark/5 to-transparent rounded-[40px] md:rounded-[60px] -rotate-2" />
 
               <img
-                src="/fotos/Luana1.png"
-                alt="Luana Brant - Psicóloga"
+                src="/fotos/Gislainy1.png"
+                alt="Gislainy Pamplona - Psicóloga"
                 className="relative w-full max-w-full aspect-[3/4] object-cover rounded-[30px] md:rounded-[50px] shadow-2xl shadow-graphite/10"
               />
 
@@ -245,7 +245,7 @@ function HeroSection({ onOpenModal }) {
                     <Brush className="w-5 h-5 text-sage" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-graphite">Arteterapia</p>
+                    <p className="text-xs font-semibold text-graphite">Psicanálise</p>
                     <p className="text-[10px] text-graphite/50">Criação & Cura</p>
                   </div>
                 </div>
@@ -287,8 +287,8 @@ function AboutSection() {
             <div className="relative max-w-md mx-auto lg:mx-0">
               <div className="absolute -inset-6 bg-sage/5 rounded-[50px] -rotate-3" />
               <img
-                src="/fotos/luana2.png"
-                alt="Luana Brant"
+                src="/fotos/Gislainy2.png"
+                alt="Gislainy Pamplona"
                 className="relative w-full max-w-full aspect-[4/5] object-cover rounded-[40px] shadow-xl"
               />
               {/* Experience badge */}
@@ -308,23 +308,23 @@ function AboutSection() {
 
             <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-graphite mb-6 leading-[1.1] break-words">
               Olá, eu sou a{' '}
-              <span className="italic text-sage">Luana Brant</span>
+              <span className="italic text-sage">Gislainy Pamplona</span>
             </h2>
 
             <p className="text-sm md:text-base font-light text-graphite/70 leading-relaxed mb-5">
-              Psicóloga Clínica (CRP 09/17500), Arteterapeuta e em formação em Core Energetics. Minha prática é um convite para olhar para si através da arte e da escuta cuidadosa.
+              Psicóloga Clínica (CRP 09/17366), Psicanalista e em formação em Traumas. Minha prática é um convite para olhar para si através da arte e da escuta cuidadosa.
             </p>
 
             <p className="text-sm md:text-base font-light text-graphite/70 leading-relaxed mb-8">
-              Mestre em Artes Visuais pela UFG, integro a sensibilidade artística ao processo terapêutico. Especialista em TDAH Adulto, busco oferecer um suporte que respeite a singularidade de cada percurso, ajudando na organização interna e na expressão do ser.
+              Mestre em Artes Visuais pela UFG, integro a sensibilidade artística ao processo terapêutico. Especialista em Ansiedade & Depressão, busco oferecer um suporte que respeite a singularidade de cada percurso, ajudando na organização interna e na expressão do ser.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
-                { icon: <Brush className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'Arteterapia' },
-                { icon: <Activity className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'TDAH Adulto' },
+                { icon: <Brush className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'Psicanálise' },
+                { icon: <Activity className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'Ansiedade & Depressão' },
                 { icon: <CalendarCheck className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'Presencial & Online' },
-                { icon: <Users className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'Grupos Terapêuticos' },
+                { icon: <Users className="w-5 h-5 text-sage" strokeWidth={1.5} />, text: 'Dependência' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-beige-light/80 rounded-xl px-4 py-3 border border-sage/5">
                   {item.icon}
@@ -334,7 +334,7 @@ function AboutSection() {
             </div>
 
             <a
-              href="https://wa.me/5562999298283?text=Ol%C3%A1%20Luana%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
+              href="https://wa.me/5562999616626?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento!"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-3 bg-graphite text-beige-light px-8 py-4 rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-graphite/90 transition-all duration-300 shadow-lg shadow-graphite/20"
@@ -356,7 +356,7 @@ function AboutSection() {
    MARQUEE / INFINITE SCROLL TEXT
    ════════════════════════════════════════════ */
 function MarqueeSection() {
-  const items = ['Arteterapia', '•', 'TDAH Adulto', '•', 'Core Energetics', '•', 'Grupos Terapêuticos', '•', 'Expressão Criativa', '•', 'Acolhimento', '•'];
+  const items = ['Psicanálise', '•', 'Ansiedade & Depressão', '•', 'Traumas', '•', 'Dependência', '•', 'Expressão Criativa', '•', 'Acolhimento', '•'];
   return (
     <div className="bg-sage py-5 overflow-hidden relative">
       <div className="flex animate-ticker whitespace-nowrap">
@@ -383,19 +383,19 @@ function ServicesSection() {
     },
     {
       icon: <Brush className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Arteterapia',
+      title: 'Psicanálise',
       desc: 'O uso da expressão artística como ferramenta de cura e autoconhecimento, acessando conteúdos que muitas vezes as palavras não alcançam.',
       accent: 'from-terracotta/10 to-beige/20',
     },
     {
       icon: <Users className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Grupos Terapêuticos',
+      title: 'Dependência',
       desc: 'Espaços de troca e acolhimento coletivo, onde a experiência do outro ressoa e fortalece o percurso individual.',
       accent: 'from-beige/15 to-sage/5',
     },
     {
       icon: <Heart className="w-8 h-8" strokeWidth={1.2} />,
-      title: 'Core Energetics',
+      title: 'Traumas',
       desc: 'Abordagem corporal que busca integrar corpo, mente e espírito, liberando bloqueios e reconectando você com sua essência vital.',
       accent: 'from-terracotta/8 to-beige-dark/8',
     },
@@ -408,7 +408,7 @@ function ServicesSection() {
     {
       icon: <CalendarCheck className="w-8 h-8" strokeWidth={1.2} />,
       title: 'Atendimento Online e Presencial',
-      desc: 'Sessões conduzidas com ética e qualidade, seja no consultório no Setor Marista ou no conforto da sua casa.',
+      desc: 'Sessões conduzidas com ética e qualidade, seja no consultório no Setor Serrinha ou no conforto da sua casa.',
       accent: 'from-sage/10 to-beige/5',
     },
   ];
@@ -542,7 +542,7 @@ function TestimonialsSection() {
   const testimonials = [
     {
       name: 'M. C.',
-      text: 'A Luana me ajudou a entender meu diagnóstico de TDAH na vida adulta de uma forma que eu nunca imaginei. Hoje me sinto muito mais organizada e em paz com meu funcionamento.',
+      text: 'A Gislainy me ajudou a entender meu diagnóstico de TDAH na vida adulta de uma forma que eu nunca imaginei. Hoje me sinto muito mais organizada e em paz com meu funcionamento.',
       role: 'Paciente',
     },
     {
@@ -552,7 +552,7 @@ function TestimonialsSection() {
     },
     {
       name: 'S. R.',
-      text: 'O grupo terapêutico coordenado pela Luana é um refúgio. Ouvir outras experiências e me expressar criativamente tem sido transformador para minha saúde mental.',
+      text: 'O grupo terapêutico coordenado pela Gislainy é um refúgio. Ouvir outras experiências e me expressar criativamente tem sido transformador para minha saúde mental.',
       role: 'Paciente',
     },
   ];
@@ -638,7 +638,7 @@ function CtaSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5562999298283?text=Ol%C3%A1%20Luana%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+                href="https://wa.me/5562999616626?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20agendar%20uma%20consulta!"
                 target="_blank"
                 rel="noreferrer"
                 className="group inline-flex items-center justify-center gap-3 bg-beige-light text-graphite px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-beige-light/90 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -688,10 +688,10 @@ function ContactSection() {
                 <MapPin className="w-6 h-6 text-sage" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="font-serif text-lg font-semibold text-graphite mb-1">Clínica Avivar</h3>
+                <h3 className="font-serif text-lg font-semibold text-graphite mb-1">Espaço Absolut</h3>
                 <p className="text-sm font-light text-graphite/60 leading-relaxed">
-                  Rua 148, 620<br />
-                  Setor Marista<br />
+                  Rua T-38, nº 1710<br />
+                  Setor Serrinha<br />
                   Goiânia - GO, 74170-110
                 </p>
               </div>
@@ -717,8 +717,8 @@ function ContactSection() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-graphite mb-1">WhatsApp</h3>
-                <a href="https://wa.me/5562999298283" target="_blank" rel="noreferrer" className="text-sm font-light text-sage hover:text-sage-dark transition-colors">
-                  (62) 99929-8283
+                <a href="https://wa.me/5562999616626" target="_blank" rel="noreferrer" className="text-sm font-light text-sage hover:text-sage-dark transition-colors">
+                  (62) 99961-6626
                 </a>
                 <p className="text-xs text-graphite/40 mt-1">Clique para agendar sua consulta</p>
               </div>
@@ -730,8 +730,8 @@ function ContactSection() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-graphite mb-1">Instagram</h3>
-                <a href="https://www.instagram.com/luanabrant.psi/" target="_blank" rel="noreferrer" className="text-sm font-light text-sage hover:text-sage-dark transition-colors">
-                  @luanabrant.psi
+                <a href="https://www.instagram.com/psigispamplona/" target="_blank" rel="noreferrer" className="text-sm font-light text-sage hover:text-sage-dark transition-colors">
+                  @psigispamplona
                 </a>
                 <p className="text-xs text-graphite/40 mt-1">Siga para mais conteúdos e reflexões</p>
               </div>
@@ -742,14 +742,14 @@ function ContactSection() {
           {/* Substituting iframe for the more central/relevant location or a static elegant map placeholder */}
           <div className="rounded-3xl overflow-hidden shadow-xl h-[350px] md:h-full border border-graphite/5 min-h-[450px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.2829398858696!2d-49.259972323861!3d-16.687611488494883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef146522f281f%3A0xe54d3714b62d2948!2sCl%C3%ADnica%20Avivar!5e0!3m2!1spt-BR!2sbr!4v1714227300000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15286.088667523912!2d-49.2736181!3d-16.7007624!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1586fb8eb57%3A0x7d6a5c1a8e268994!2sEspa%C3%A7o%20Absolut!5e0!3m2!1spt-BR!2sbr!4v1714227300000!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Clínica Avivar"
+              title="Localização Espaço Absolut"
             />
           </div>
 
@@ -772,15 +772,15 @@ function Footer() {
           <div className="max-w-sm">
             <div className="flex items-center gap-2 mb-4">
               <Palette className="w-5 h-5 text-sage" strokeWidth={1.5} />
-              <span className="font-serif text-2xl font-semibold">Luana Brant</span>
+              <span className="font-serif text-2xl font-semibold">Gislainy Pamplona</span>
             </div>
             <p className="text-sm font-light text-beige-light/50 leading-relaxed mb-6">
-              Psicóloga e Arteterapeuta — CRP 09/17500<br />
-              Atendimento presencial na Clínica Avivar (Setor Marista) e online. Foco em TDAH Adulto, Arteterapia e Grupos Terapêuticos.
+              Psicóloga e Psicanalista — CRP 09/17366<br />
+              Atendimento presencial na Espaço Absolut (Setor Serrinha) e online. Foco em Ansiedade & Depressão, Psicanálise e Dependência.
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/luanabrant.psi/"
+                href="https://www.instagram.com/psigispamplona/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-beige-light/10 rounded-full flex items-center justify-center hover:bg-beige-light/20 transition-colors"
@@ -788,7 +788,7 @@ function Footer() {
                 <Instagram className="w-4 h-4 text-beige-light" strokeWidth={1.5} />
               </a>
               <a
-                href="https://wa.me/5562999298283"
+                href="https://wa.me/5562999616626"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-beige-light/10 rounded-full flex items-center justify-center hover:bg-beige-light/20 transition-colors"
@@ -815,22 +815,22 @@ function Footer() {
           {/* Contact info */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-sage mb-2">Contato</h4>
-            <a href="https://wa.me/5562999298283" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5" /> (62) 99929-8283
+            <a href="https://wa.me/5562999616626" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5" /> (62) 99961-6626
             </a>
-            <a href="https://www.instagram.com/luanabrant.psi/" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
-              <Instagram className="w-3.5 h-3.5" /> @luanabrant.psi
+            <a href="https://www.instagram.com/psigispamplona/" target="_blank" rel="noreferrer" className="text-sm text-beige-light/50 hover:text-beige-light transition-colors font-light flex items-center gap-2">
+              <Instagram className="w-3.5 h-3.5" /> @psigispamplona
             </a>
             <p className="text-sm text-beige-light/50 font-light flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5" /> Setor Marista, Goiânia
+              <MapPin className="w-3.5 h-3.5" /> Setor Serrinha, Goiânia
             </p>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-beige-light/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-beige-light/30">
-          <p>© 2026 Luana Brant — Psicóloga e Arteterapeuta. Todos os direitos reservados.</p>
-          <p>CRP 09/17500</p>
+          <p>© 2026 Gislainy Pamplona — Psicóloga e Psicanalista. Todos os direitos reservados.</p>
+          <p>CRP 09/17366</p>
         </div>
       </div>
     </footer>
@@ -843,7 +843,7 @@ function Footer() {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/5562999298283?text=Ol%C3%A1%20Luana%2C%20gostaria%20de%20agendar%20uma%20consulta!"
+      href="https://wa.me/5562999616626?text=Ol%C3%A1%20Gislainy%2C%20gostaria%20de%20agendar%20uma%20consulta!"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 transition-transform duration-300 group"
